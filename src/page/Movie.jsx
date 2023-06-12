@@ -1,7 +1,13 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 const Movie = () => {
-  return <div>Movie</div>;
+  return (
+    <>
+      <p>Movie</p>
+      <Outlet />
+    </>
+  );
 };
 
 export default Movie;

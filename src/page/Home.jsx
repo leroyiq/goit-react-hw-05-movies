@@ -1,7 +1,9 @@
-import React from 'react';
+import { ApiServices } from 'components/Api/ApiServices';
 
 const Home = () => {
-  return <div>Home</div>;
+  const data = ApiServices();
+  console.log(data);
+  return <>{/* <p>{data}</p> */}</>;
 };
 
 export default Home;
