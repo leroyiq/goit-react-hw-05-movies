@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 import { Outlet, NavLink } from 'react-router-dom';
 
 const Layout = () => {
@@ -15,6 +16,7 @@ const Layout = () => {
         </ul>
       </nav>
       <Outlet />
+      <Toaster />
     </>
   );
 };
