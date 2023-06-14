@@ -12,7 +12,7 @@ const Home = () => {
         const trendingMovieArray = await ApiServices();
         setTrendMovie(trendingMovieArray);
       } catch (error) {
-        toast.error('Sory  error Trending', error);
+        toast.error('Sory error trending', error);
       }
     };
     getTrend();

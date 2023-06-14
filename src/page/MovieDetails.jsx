@@ -1,10 +1,17 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { BiCaretLeft } from 'react-icons/bi';
+import { Link, Outlet } from 'react-router-dom';
 
 const MovieDetails = () => {
   return (
     <>
-      <div>MovieDetails</div>
+      <Link>
+        <BiCaretLeft /> Go back
+      </Link>
+      <div>
+        <input type="text" aria-label="Movie Search"></input>
+        <button type="button">Search</button>
+      </div>
       <Outlet />
     </>
   );
