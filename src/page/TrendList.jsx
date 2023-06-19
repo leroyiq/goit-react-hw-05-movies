@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const TrendList = ({ trendMovie }) => {
+  const location = useLocation();
+
   return (
     <>
       <h2>Trending today</h2>
@@ -9,7 +11,9 @@ const TrendList = ({ trendMovie }) => {
         {trendMovie.map(({ id, title }) => {
           return (
             <li key={id}>
-              <Link to="/movies/:movieId">{title}</Link>
+              <Link to={`/movies/${id}`} state={{ from: location }}>
+                {title}
+              </Link>
             </li>
           );
         })}

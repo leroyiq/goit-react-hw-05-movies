@@ -1,17 +1,19 @@
 import React from 'react';
-import { BiCaretLeft } from 'react-icons/bi';
-import { Link, Outlet } from 'react-router-dom';
+
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 const MovieDetails = () => {
+  const navigateBack = useNavigate();
+  const location = useLocation();
+  const onClick = () => {
+    navigateBack(location.state.from);
+  };
   return (
     <>
-      <Link>
-        <BiCaretLeft /> Go back
-      </Link>
-      <div>
-        <input type="text" aria-label="Movie Search"></input>
-        <button type="button">Search</button>
-      </div>
+      <button type="button" onClick={onClick}>
+        {'<< -  '}Go back
+      </button>
+
       <Outlet />
     </>
   );
