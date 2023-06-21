@@ -20,7 +20,7 @@ const Home = () => {
 
     getTrend();
   }, [trendMovieList]);
-  console.log(trendMovie);
+  
 
   return trendMovie && <TrendList trendMovie={trendMovie} />;
 };

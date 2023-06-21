@@ -7,7 +7,7 @@ import { ApiServices } from 'components/Api/ApiServices';
 import { toast } from 'react-hot-toast';
 import Endpoint from 'components/Api/Endpoint';
 import { useState } from 'react';
-import { ButtonBack } from './MovieDetails.styled';
+import { AddInfo, ButtonBack, DIV, DIVinfo } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const navigateBack = useNavigate();
@@ -33,38 +33,47 @@ const MovieDetails = () => {
     };
     getMovie();
   }, [movieId]);
+  console.log(movieInfo);
 
-  const { poster_path, title, vote_average, overview, genres } = movieInfo;
+  const { poster_path, title, vote_average, overview, genres, release_date } = movieInfo;
 
   return (
-    <>
-      <ButtonBack type="button" onClick={onClick}>
-        <BsFillArrowLeftCircleFill style={{ fontSize: 18 }} /> Back
-      </ButtonBack>
-      <div>
-        <img src={`${imgBaseUrl}${poster_path}`} alt={title} width={250} />
-        <h2>{title}</h2>
-        <p>User score : {parseInt(vote_average * 10)}%</p>
-        <br />
-        <p>
-          <b>Overview</b>
-        </p>
-        <br />
-        <p>{overview}</p>
-        <br />
-        <span>
-          <b>Genres</b>
-        </span>
-        {genres && <p>{genres.map(genre => genre.name + '  ')}</p>}
-      </div>
+    movieInfo && (
+      <>
+        <ButtonBack type="button" onClick={onClick}>
+          <BsFillArrowLeftCircleFill style={{ fontSize: 18 }} /> Back
+        </ButtonBack>
+        <DIV>
+          <img src={`${imgBaseUrl}${poster_path}`} alt={title} width={250} style={{ marginTop: '20px' }} />
+          <DIVinfo>
+            <h2>
+              {title} ({release_date.split('-')[0]})
+            </h2>
+            <p>User score : {parseInt(vote_average * 10)}%</p>
+            <br />
+            <p>
+              <b>Overview</b>
+            </p>
+            <br />
+            <p style={{ maxWidth: '500px' }}>{overview}</p>
 
-      <div>
-        <Link to="cast">Cast</Link>
-        <Link to="reviews">Reviews</Link>
-      </div>
+            <br />
+            <span>
+              <b>Genres</b>
+            </span>
+            {genres && <p>{genres.map(genre => genre.name + '  ')}</p>}
+          </DIVinfo>
+        </DIV>
+        <AddInfo>
+          <h3>Additional information</h3>
 
-      <Outlet />
-    </>
+          <Link to="cast">Cast</Link>
+          <Link to="reviews">Reviews</Link>
+        </AddInfo>
+
+        <Outlet />
+      </>
+    )
   );
 };
 

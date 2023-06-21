@@ -19,3 +19,26 @@ export const ButtonBack = styled.button`
     transform: translate(0px, 0px) scale(1.03, 1.03);
   }
 `;
+
+export const DIV = styled.div`
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
+`;
+export const DIVinfo = styled.div`
+  scale: 0.9;
+`;
+export const AddInfo = styled.div`
+  display: block;
+  padding: 10px 15px;
+  border-top: 2px solid #53585354;
+  border-bottom: 2px solid #53585354;
+  & a {
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: orange;
+      cursor: pointer;
+    }
+  }
+`;
