@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import defaultIMG from '../../components/Api/depositphotos_10275817-stock-photo-business-man.jpg';
 import { UL } from './Cast.styled';
-const Cast = ({ title }) => {
+const Cast = () => {
   const [credits, setCredits] = useState('');
   const { movieId } = useParams();
 
@@ -23,7 +23,6 @@ const Cast = ({ title }) => {
     };
     getCast();
   }, [movieId, setCredits]);
-  console.log(credits);
 
   return (
     credits && (

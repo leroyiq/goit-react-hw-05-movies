@@ -26,3 +26,13 @@ export const fetchCast = async endpoint => {
     toast.error('Ошибка!!!', error);
   }
 };
+
+export const fetchReviews = async endpoint => {
+  try {
+    const response = await axios.get(`${baseURL}${endpoint}${API_KEY}`);
+
+    return response.data.results;
+  } catch (error) {
+    toast.error('Ошибка!!!', error);
+  }
+};
