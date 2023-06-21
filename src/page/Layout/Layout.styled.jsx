@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const ActiveNavLink = styled(NavLink)`
   color: black;
   text-decoration: none;
+
   &.active {
     color: orange;
   }
@@ -12,6 +13,7 @@ export const ActiveNavLink = styled(NavLink)`
 export const NavList = styled.ul`
   list-style: none;
   display: flex;
+
   gap: 20px;
   font-weight: bold;
   height: 100%;

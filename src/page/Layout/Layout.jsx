@@ -6,7 +6,7 @@ import { ActiveNavLink, NavList } from './Layout.styled';
 const Layout = () => {
   return (
     <>
-      <nav>
+      <nav style={{ position: 'sticky', top: '0', backgroundColor: 'white', zIndex: '99' }}>
         <NavList>
           <li>
             <ActiveNavLink to="/">Home</ActiveNavLink>
