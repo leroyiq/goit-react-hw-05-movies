@@ -6,7 +6,7 @@ const TrendList = ({ trendMovie }) => {
 
   return (
     <>
-      <h2>Trending today</h2>
+      <h2 style={{ marginLeft: '20px' }}>Trending today</h2>
       <ul>
         {trendMovie.map(({ id, title }) => {
           return (
