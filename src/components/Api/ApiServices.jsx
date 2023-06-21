@@ -7,7 +7,11 @@ const API_KEY = '?api_key=daa520ad18df8c3872ae77ceafe7ed32';
 export const ApiServices = async endpoint => {
   try {
     const response = await axios.get(`${baseURL}${endpoint}${API_KEY}`);
-    return response.data.results;
+    if (endpoint === '/trending/movie/day') {
+      return response.data.results;
+    } else {
+      return response.data;
+    }
   } catch (error) {
     toast.error('Ошибка!!!', error);
   }
