@@ -36,3 +36,13 @@ export const fetchReviews = async endpoint => {
     toast.error('Ошибка!!!', error);
   }
 };
+
+export const FindMovie = async endpoint => {
+  try {
+    const response = await axios.get(`${baseURL}/search/movie${API_KEY}${endpoint}`);
+
+    return response.data.results;
+  } catch (error) {
+    toast.error('Ошибка!!!', error);
+  }
+};
