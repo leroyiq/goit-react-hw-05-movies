@@ -55,6 +55,6 @@ export const IMG = styled.img`
 
   @media screen and (max-width: 738px) {
     max-width: 100%;
-    /* height: 50%; */
+    height: 50%;
   }
 `;
