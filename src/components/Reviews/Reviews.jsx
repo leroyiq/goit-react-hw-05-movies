@@ -1,4 +1,4 @@
-import { fetchReviews } from 'components/Api/ApiServices';
+import { fetchReviews } from 'Api/ApiServices';
 
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';

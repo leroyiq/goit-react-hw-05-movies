@@ -1,4 +1,4 @@
-import { FindMovie } from 'components/Api/ApiServices';
+import { FindMovie } from 'Api/ApiServices';
 
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';

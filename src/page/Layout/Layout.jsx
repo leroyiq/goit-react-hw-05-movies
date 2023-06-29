@@ -2,6 +2,7 @@ import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Outlet } from 'react-router-dom';
 import { ActiveNavLink, NavList } from './Layout.styled';
+import { Suspense } from 'react';
 
 const Layout = () => {
   return (
@@ -16,7 +17,9 @@ const Layout = () => {
           </li>
         </NavList>
       </nav>
-      <Outlet />
+      <Suspense fallback={'Loading . . .'}>
+        <Outlet />
+      </Suspense>
       <Toaster />
     </>
   );

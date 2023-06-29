@@ -1,7 +1,6 @@
-import SearchMovie from 'page/SearchMovie/SearchMovie';
+import SearchMovie from 'components/SearchMovie/SearchMovie';
 
 const Movie = () => {
-  
   return (
     <>
       <SearchMovie />

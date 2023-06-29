@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import page404 from '../../components/Api/404-error.jpg';
+import page404 from '../../Api/404-error.jpg';
 
 const NotFound = () => {
   const navigate = useNavigate();

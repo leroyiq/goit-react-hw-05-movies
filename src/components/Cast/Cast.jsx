@@ -1,10 +1,11 @@
-import { fetchCast } from 'components/Api/ApiServices';
+import { fetchCast } from 'Api/ApiServices';
 
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
-import defaultIMG from '../../components/Api/depositphotos_10275817-stock-photo-business-man.jpg';
+import defaultIMG from '../../Api/depositphotos_10275817-stock-photo-business-man.jpg';
 import { UL } from './Cast.styled';
+
 const Cast = () => {
   const [credits, setCredits] = useState('');
   const { movieId } = useParams();

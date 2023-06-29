@@ -1,12 +1,13 @@
 import React from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { ApiServices } from 'components/Api/ApiServices';
+import { ApiServices } from 'Api/ApiServices';
 import { toast } from 'react-hot-toast';
-import Endpoint from 'components/Api/Endpoint';
+import Endpoint from 'Api/Endpoint';
 import { useState } from 'react';
-
 import MovieCard from './MovieCard';
+
+
 
 const MovieDetails = () => {
   const navigateBack = useNavigate();
