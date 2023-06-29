@@ -1,11 +1,11 @@
 import { FindMovie } from 'components/Api/ApiServices';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 
 const SearchMovie = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [movieList, setMovieList] = useState('');
+  const [movieList, setMovieList] = useState();
   const query = searchParams.get('query');
   const location = useLocation();
 
@@ -30,6 +30,11 @@ const SearchMovie = () => {
     event.preventDefault();
     getSearch();
   };
+
+  useEffect(() => {
+    if (!query) return;
+    getSearch();
+  }, []);
 
   return (
     <>
