@@ -1,8 +1,8 @@
-import { ApiServices } from 'Api/ApiServices';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Endpoint from 'Api/Endpoint';
 import TrendList from 'components/TrendList/TrendList';
+import { ApiServices } from 'Api/ApiServices';
 
 const Home = () => {
   const [trendMovie, setTrendMovie] = useState([]);
