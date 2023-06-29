@@ -1,4 +1,5 @@
 import { FindMovie } from 'components/Api/ApiServices';
+
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
@@ -28,6 +29,7 @@ const SearchMovie = () => {
 
   const searchSubmit = event => {
     event.preventDefault();
+
     getSearch();
   };
 
@@ -38,7 +40,7 @@ const SearchMovie = () => {
 
   return (
     <>
-      <form onSubmit={searchSubmit}>
+      <form onSubmit={searchSubmit} style={{ margin: '15px' }}>
         <input type="text" name="query" value={query ?? ''} required onChange={inputChange} />
         <button type="submit">Search</button>
       </form>

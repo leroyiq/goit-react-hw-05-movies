@@ -23,10 +23,15 @@ export const ButtonBack = styled.button`
 export const DIV = styled.div`
   display: flex;
   margin-left: 15px;
+  margin-right: 15px
   margin-bottom: 10px;
+  @media screen and (max-width: 320px) {
+    display: block;
+  }
 `;
 export const DIVinfo = styled.div`
   scale: 0.9;
+  padding: 5px;
 `;
 export const AddInfo = styled.div`
   display: block;
@@ -40,5 +45,15 @@ export const AddInfo = styled.div`
       color: orange;
       cursor: pointer;
     }
+  }
+`;
+
+export const IMG = styled.img`
+  width: 250px;
+  margin-top: 20px;
+
+  @media screen and (max-width: 320px) {
+    max-width: 100vw;
+    height: 50%;
   }
 `;

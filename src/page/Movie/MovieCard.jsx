@@ -1,5 +1,5 @@
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
-import { AddInfo, ButtonBack, DIV, DIVinfo } from './MovieDetails.styled';
+import { AddInfo, ButtonBack, DIV, DIVinfo, IMG } from './MovieDetails.styled';
 import { Link, Outlet } from 'react-router-dom';
 
 const imgBaseUrl = 'https://image.tmdb.org/t/p/w500';
@@ -13,7 +13,7 @@ const MovieCard = ({ dataCard, onClick }) => {
         <BsFillArrowLeftCircleFill style={{ fontSize: 18 }} /> Back
       </ButtonBack>
       <DIV>
-        <img src={`${imgBaseUrl}${poster_path}`} alt={title} width={250} style={{ marginTop: '20px' }} />
+        <IMG src={`${imgBaseUrl}${poster_path}`} alt={title} width={250} style={{ marginTop: '20px' }} />
         <DIVinfo>
           <h2>
             {title} ({release_date.split('-')[0]})
