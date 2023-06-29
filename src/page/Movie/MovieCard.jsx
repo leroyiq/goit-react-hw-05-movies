@@ -13,7 +13,7 @@ const MovieCard = ({ dataCard, onClick }) => {
         <BsFillArrowLeftCircleFill style={{ fontSize: 18 }} /> Back
       </ButtonBack>
       <DIV>
-        <IMG src={`${imgBaseUrl}${poster_path}`} alt={title} width={250} style={{ marginTop: '20px' }} />
+        <IMG src={`${imgBaseUrl}${poster_path}`} alt={title} />
         <DIVinfo>
           <h2>
             {title} ({release_date.split('-')[0]})

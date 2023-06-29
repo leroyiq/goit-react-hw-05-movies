@@ -25,8 +25,9 @@ export const DIV = styled.div`
   margin-left: 15px;
   margin-right: 15px
   margin-bottom: 10px;
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 738px) {
     display: block;
+    
   }
 `;
 export const DIVinfo = styled.div`
@@ -52,8 +53,8 @@ export const IMG = styled.img`
   width: 250px;
   margin-top: 20px;
 
-  @media screen and (max-width: 320px) {
-    max-width: 100vw;
-    height: 50%;
+  @media screen and (max-width: 738px) {
+    max-width: 100%;
+    /* height: 50%; */
   }
 `;
